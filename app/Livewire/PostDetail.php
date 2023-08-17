@@ -11,6 +11,11 @@ class PostDetail extends Component
     #[Reactive]
     public Posts $post;
 
+    public function mount()
+    {
+        sleep(2);
+    }
+
     public function placeholder()
     {
         return view('livewire.placeholder.post-item');
