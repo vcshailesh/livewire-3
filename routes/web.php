@@ -3,6 +3,7 @@
 use App\Livewire\CreatePost;
 use App\Livewire\Home;
 use App\Livewire\Posts;
+use App\Livewire\Todos;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Home::class)->name('home');
+
+Route::get('todos', Todos::class)->name('todos');
 
 Route::group(['prefix' => 'posts', 'as' => 'posts.'], function() {
     Route::get('/', Posts::class)->name('index');
